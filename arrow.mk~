@@ -1,0 +1,6 @@
+$(call inherit-product, device/linaro/pandaboard/pandaboard.mk)
+
+PRODUCT_NAME:= arrow
+PRODUCT_DEVICE:= arrow
+PRODUCT_BRAND:= Android
+PRODUCT_MODEL:= Android
