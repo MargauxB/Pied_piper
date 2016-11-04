@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 libusb_1_0_la-linux_usbfs.lo: os/linux_usbfs.c ../config.h \
  /usr/include/ctype.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/bits/predefs.h \
@@ -266,3 +267,6 @@ os/threads_posix.h:
 os/poll_posix.h:
 
 os/linux_usbfs.h:
+=======
+# dummy
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579

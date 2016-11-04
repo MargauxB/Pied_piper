@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 libusb_1_0_la-io.lo: io.c ../config.h /usr/include/errno.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/bits/predefs.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -214,3 +215,6 @@ os/threads_posix.h:
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 os/poll_posix.h:
+=======
+# dummy
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579

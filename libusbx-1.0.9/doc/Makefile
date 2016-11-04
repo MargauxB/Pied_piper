@@ -54,6 +54,7 @@ am__v_at_0 = @
 SOURCES =
 DIST_SOURCES =
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+<<<<<<< HEAD
 ACLOCAL = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run aclocal-1.11
 AMTAR = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run tar
 AM_CFLAGS = -std=gnu99 -Wall -Wundef -Wunused -Wstrict-prototypes -Werror-implicit-function-declaration -Wno-pointer-sign -Wshadow
@@ -62,6 +63,16 @@ AR = ar
 AUTOCONF = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run automake-1.11
+=======
+ACLOCAL = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run tar
+AM_CFLAGS = -std=gnu99 -Wall -Wundef -Wunused -Wstrict-prototypes -Werror-implicit-function-declaration -Wno-pointer-sign -Wshadow
+AM_DEFAULT_VERBOSITY = 0
+AR = ar
+AUTOCONF = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run automake-1.11
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -96,7 +107,11 @@ LN_S = ln -s
 LTLDFLAGS = -version-info 1:0:1 -no-undefined
 LTLIBOBJS = 
 MAINT = #
+<<<<<<< HEAD
 MAKEINFO = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/missing --run makeinfo
+=======
+MAKEINFO = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/missing --run makeinfo
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -127,10 +142,17 @@ STRIP = strip
 THREAD_CFLAGS = -pthread
 VERSION = 1.0.9
 VISIBILITY_CFLAGS = -fvisibility=hidden
+<<<<<<< HEAD
 abs_builddir = /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/doc
 abs_srcdir = /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/doc
 abs_top_builddir = /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9
 abs_top_srcdir = /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9
+=======
+abs_builddir = /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/doc
+abs_srcdir = /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/doc
+abs_top_builddir = /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9
+abs_top_srcdir = /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -159,7 +181,11 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
+<<<<<<< HEAD
 install_sh = ${SHELL} /home/lo52tp/LO52_projet/Sources/linaro-ics-tp/device/utbm/Pied_piper/libusbx-1.0.9/install-sh
+=======
+install_sh = ${SHELL} /home/lo52tp/LO52_projet/Sources/resources_projet/libusbx-1.0.9/install-sh
+>>>>>>> ddee1735196d00821482cccf643afd63380f0579
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
