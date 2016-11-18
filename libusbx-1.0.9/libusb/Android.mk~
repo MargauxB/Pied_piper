@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := core.c descriptor.c io.c sync.c os/linux_usbfs.c os/openbsd_usb.c
+LOCAL_SRC_FILES := core.c descriptor.c io.c sync.c os/linux_usbfs.c openbsd_usb.c
 LOCAL_MODULE := libusb-lib 
 LOCAL_C_INCLUDES += 	$(LOCAL_PATH)/include\
 			$(LOCAL_PATH)/os
