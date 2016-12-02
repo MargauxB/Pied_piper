@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <libusb.h>
+
+#define ML_VENDOR_ID			0x0416
+#define ML_DEVICE_ID			0x9391
+
+#define ML_ACTION_FIRE			0x10
+#define ML_ACTION_MOVE_DOWN		0x1
+#define ML_ACTION_MOVE_LEFT		0x8
+#define ML_ACTION_MOVE_RIGHT		0x4
+#define ML_ACTION_MOVE_UP		0x2
+#define ML_ACTION_STOP			0x0
+
+static struct libusb_device_handle **devh;
+int nbr_device;
+
+
+mlb_init_usb JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlb_init_usb(JNIEnv*env, Jobject this)
+mlbin_free_usb JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlb_free_usb(JNIEnv*env, Jobject this)
+mlbin_fire JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlbin_fire(JNIEnv*env, Jobject this, Jint device)
+mlbin_move_down JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlbin_move_down(JNIEnv*env, Jobject this, Jint device)
+mlbin_move_left JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlbin_move_left(JNIEnv*env, Jobject this, Jint device)
+mlbin_move_right JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlbin_move_right(JNIEnv*env, Jobject this, Jint device)
+mlbin_move_up JNIEXPORT jint JNICALL Java_com.android.PiedPiper_InitUsb mlbin_move_up(JNIEnv*env, Jobject this, Jint device)
+
+
+int mlbin_move_up(int device)
+{
+	if (device == -1) {
+		int i;
+		for (i = 0; i < nbr_device; i++) {
+			unsigned char data[] = {0x5f, ML_ACTION_MOVE_UP, 0xe0, 0xff, 0xfe};
+			libusb_control_transfer(devh[i], 0x21, 0x09, 0, 0, data, 5, 300);
+		}
+	} else {
+		unsigned char data[] = {0x5f, ML_ACTION_MOVE_UP, 0xe0, 0xff, 0xfe};
+		libusb_control_transfer(devh[device], 0x21, 0x09, 0, 0, data, 5, 300);
+	}
+
+	printf("Move Up!\n");
+	return 0;
+}
+
+int mlbin_stop(void)
+{
+	unsigned char data[] = {0x5f, ML_ACTION_STOP, 0xe0, 0xff, 0xfe};
+	int i;
+	for (i = 0; i < nbr_device; i++)
+		libusb_control_transfer(devh[i], 0x21, 0x09, 0, 0, data, 5, 300);
+
+	printf("Stop!\n");
+	return 0;
+}
+
+int mlbin_count_devices(void)
+{
+	return nbr_device;
+}
+
+int main(void)
+{
+	int ret;
+	char dir;
+	int time;
+	int device;
+
+	mlbin_init_usb();
+	mlbin_stop();
+
+	do {
+		printf("%d lance missiles ont été connectés au système\n", nbr_device);
+		ret = scanf("%d %c %d", &device, &dir, &time);
+		if (ret != 3)
+			continue;
+
+		printf("%d: %c for %d\n", device, dir, time);
+		switch(dir) {
+			case 'L':
+				mlbin_move_left(device);
+				break;
+			case 'R':
+				mlbin_move_right(device);
+				break;
+			case 'U':
+				mlbin_move_up(device);
+				break;
+			case 'D':
+				mlbin_move_down(device);
+				break;
+			case 'F':
+				mlbin_fire(device);
+				break;
+			default:
+				break;
+		}
+		sleep(time);
+		mlbin_stop();
+	} while(ret != EOF);
+
+	mlbin_free_usb();
+
+	return 0;
+}
