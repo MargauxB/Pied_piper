@@ -1,25 +1,7 @@
-mlb_init_usb JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbInitUsb(JNIEnv*env, Jobject this)
-
-mlbin_free_usb JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbFreeUsb(JNIEnv*env, Jobject this)
-
-mlbin_fire JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinFire(JNIEnv*env, Jobject this)
-
-mlbin_move_down JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveDown(JNIEnv*env, Jobject this)
-
-mlbin_move_left JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveLeft(JNIEnv*env, Jobject this)
-
-mlbin_move_right JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveRight(JNIEnv*env, Jobject this)
-
-mlbin_move_up JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveUp(JNIEnv*env, Jobject this)
-
-mlbin_stop JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbStop(JNIEnv*env, Jobject this)
-
-mlbin_count_devices JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinCountDevices(JNIEnv*env, Jobject this)
-
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "jni.h"
 #include <libusb.h>
 
 #define ML_VENDOR_ID			0x0416

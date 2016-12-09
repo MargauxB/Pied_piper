@@ -10,3 +10,18 @@ LOCAL_C_INCLUDES += 	$(LOCAL_PATH)/../libusbx-1.0.9/libusb/include\
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
 
+include $(CLEAR_VARS)
+LOCAL_SHARED_LIBRARIES := libusb-lib\
+			libutils\
+			libcutils
+
+LOCAL_SRC_FILES := mlbin_jni.c
+LOCAL_MODULE := libmlbin_jni 
+LOCAL_C_INCLUDES += 	$(LOCAL_PATH)/../libusbx-1.0.9/libusb/include\
+			$(LOCAL_PATH)/../libusbx-1.0.9/libusb/os\
+			$(JNI_H_INCLUDE)
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
+
+
+

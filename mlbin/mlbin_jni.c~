@@ -156,7 +156,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveUp(JNIEnv*env
 	return 0;
 }
 
-int mlbin_stop(void)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbStop(JNIEnv*env, Jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_STOP, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
