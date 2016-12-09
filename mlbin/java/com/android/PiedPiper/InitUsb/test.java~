@@ -1,0 +1,15 @@
+package com.android.PiedPiper.InitUsb
+
+public class PiedPiper_Launcher {
+	static {
+		System.loadLibrary("PiedPiper_Launcher")
+	}
+
+	public native int mlbin_free_usb(void)
+	public native int mlbin_fire(void)
+	public native int mlbin_move_down(void)
+	public native int mlbin_move_left(void)
+	public native int mlbin_move_right(void)
+	public native int mlbin_move_up(void)
+	public native int mlbin_stop(void)
+}
