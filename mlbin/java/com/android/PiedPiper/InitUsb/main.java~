@@ -1,0 +1,9 @@
+public static void main(String [ ] args){
+	thows InterruptedException{	
+		InitUsb BoumBoum = new InitUsb();
+		BoumBoum.mlbInitUsb();
+		Thread.sleep(1000);
+		BoumBoum
+	
+	
+}
