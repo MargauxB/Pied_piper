@@ -4,13 +4,13 @@ public class InitUsb {
 		System.loadLibrary("mlbin_jni")
 	}
 
-	public native int mlbInitUsb(JNIEnv*env, Jobject this)
-	public native int mlbFreeUsb(JNIEnv*env,Jobject this)
-	public native int mlbinFire(JNIEnv*env, Jobject this)
-	public native int mlbinMoveDown(JNIEnv*env, Jobject this)
-	public native int mlbinMoveLeft(JNIEnv*env, Jobject this)
-	public native int mlbinMoveRight(JNIEnv*env, Jobject this)
-	public native int mlbinMoveUp(JNIEnv*env, Jobject this)
-	public native int mlbStop(JNIEnv*env, Jobject this)
+	public native int mlbInitUsb()
+	public native int mlbFreeUsb()
+	public native int mlbinFire()
+	public native int mlbinMoveDown()
+	public native int mlbinMoveLeft()
+	public native int mlbinMoveRight()
+	public native int mlbinMoveUp()
+	public native int mlbStop()
 
 }

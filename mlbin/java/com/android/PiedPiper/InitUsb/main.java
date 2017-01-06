@@ -10,4 +10,6 @@ public static void main(String [ ] args){
 		BoumBoum.mlbinMoveLeft();
 		Thread.sleep(2000);
 		BoumBoum.mlbinMoveRight();
+		Thread.sleep(2000);
+		BoumBoum.mlbinFire();
 }

@@ -16,7 +16,7 @@
 
 static struct libusb_device_handle *devh;
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbInitUsb(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbInitUsb(JNIEnv*env, jobject this)
 {
 	libusb_device **list;
 	libusb_device *device = NULL;
@@ -84,7 +84,7 @@ error:
 	exit(1);
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbFreeUsb(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbFreeUsb(JNIEnv*env, jobject this)
 {
 	libusb_release_interface(devh, 0);
 	libusb_close(devh);
@@ -93,7 +93,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbFreeUsb(JNIEnv*env,
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinFire(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinFire(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_FIRE, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
@@ -102,7 +102,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinFire(JNIEnv*env, 
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveDown(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveDown(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_MOVE_DOWN, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
@@ -111,7 +111,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveDown(JNIEnv*e
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveLeft(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveLeft(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_MOVE_LEFT, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
@@ -120,7 +120,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveLeft(JNIEnv*e
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveRight(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveRight(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_MOVE_RIGHT, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
@@ -129,7 +129,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveRight(JNIEnv*
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveUp(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveUp(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_MOVE_UP, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
@@ -138,7 +138,7 @@ JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbinMoveUp(JNIEnv*env
 	return 0;
 }
 
-JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbStop(JNIEnv*env, Jobject this)
+JNIEXPORT jint JNICALL Java_com_android_PiedPiper_InitUsb_mlbStop(JNIEnv*env, jobject this)
 {
 	unsigned char data[] = {0x5f, ML_ACTION_STOP, 0xe0, 0xff, 0xfe};
 	libusb_control_transfer(devh, 0x21, 0x09, 0, 0, data, 5, 300);
